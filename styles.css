@@ -9,6 +9,7 @@ body {
   background: #222831;
   color: #fff;
   min-height: 100vh;
+
   padding: 20px;
 
   /* Center everything vertically and horizontally */
@@ -16,6 +17,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
 }
 
 h1 {
@@ -33,6 +35,8 @@ h1 {
   max-width: 400px;
   box-shadow: 0 4px 14px rgb(0 0 0 / 0.5);
   margin-bottom: 30px;
+
+  transition: transform 0.3s ease;
 }
 
 .calculator label {
@@ -41,7 +45,9 @@ h1 {
   font-size: 1rem;
 }
 
-.calculator input {
+.calculator input,
+.calculator select,
+.calculator button {
   width: 100%;
   padding: 12px;
   margin-bottom: 20px;
@@ -53,15 +59,14 @@ h1 {
 }
 
 .calculator button {
-  width: 100%;
-  padding: 12px;
   background: #00adb5;
   color: #fff;
-  border: none;
-  border-radius: 10px;
   font-size: 1rem;
-  cursor: pointer;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
   transition: background 0.3s ease;
+  cursor: pointer;
 }
 
 .calculator button:hover {
@@ -74,16 +79,21 @@ h1 {
   font-size: 1.2rem;
 }
 
-/* make it more responsive for small screens */
+/* Small screens */
 @media (max-width: 425px) {
+  body {
+    padding: 10px;
+  }
+
   .calculator {
-    padding: 18px;
+    padding: 16px;
     max-width: 100%;
   }
 
   .calculator input,
+  .calculator select,
   .calculator button {
-    padding: 11px;
+    padding: 10px;
     font-size: 0.95rem;
   }
 
@@ -92,6 +102,7 @@ h1 {
   }
 }
 
+/* Large screens */
 @media (min-width: 1024px) {
   .calculator {
     max-width: 500px;
@@ -99,6 +110,7 @@ h1 {
   }
 
   .calculator input,
+  .calculator select,
   .calculator button {
     padding: 14px;
     font-size: 1.1rem;
@@ -106,25 +118,5 @@ h1 {
 
   #result {
     font-size: 1.4rem;
-  }
-}
-@media (min-width: 1440px) {
-  body {
-    padding: 40px;
-  }
-
-  .calculator {
-    max-width: 600px;
-    padding: 40px;
-  }
-
-  .calculator input,
-  .calculator button {
-    padding: 16px;
-    font-size: 1.2rem;
-  }
-
-  #result {
-    font-size: 1.6rem;
   }
 }

@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Hours Calculator</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="Hours Calculator">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hours Calculator</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Hours Calculator</h1>
-  
+
+<h1>Hours Calculator</h1>
+
   <div class="calculator">
     <label for="start">Start Time</label>
     <input id="start" type="time">
-    
     <label for="end">End Time</label>
     <input id="end" type="time">
-    
+    <label for="format">Time Format</label>
+    <select id="format">
+      <option value="24">24-Hour</option>
+      <option value="12">12-Hour (AM/PM)</option>
+    </select>
+
     <button id="calculate">Calculate Hours</button>
-    
-    <h2 id="result">Total Hours: 0</h2>
+
+    <div id="result">Total Hours: 0</div>
   </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
