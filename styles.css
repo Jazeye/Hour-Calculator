@@ -46,7 +46,6 @@ h1 {
 }
 
 .calculator input,
-.calculator select,
 .calculator button {
   width: 100%;
   padding: 12px;
@@ -91,7 +90,6 @@ h1 {
   }
 
   .calculator input,
-  .calculator select,
   .calculator button {
     padding: 10px;
     font-size: 0.95rem;
@@ -110,7 +108,6 @@ h1 {
   }
 
   .calculator input,
-  .calculator select,
   .calculator button {
     padding: 14px;
     font-size: 1.1rem;
@@ -120,3 +117,24 @@ h1 {
     font-size: 1.4rem;
   }
 }
+/* Extra large screens */
+@media (min-width: 1440px) {
+  body {
+    padding: 40px;
+  }
+
+  .calculator {
+    max-width: 600px;
+    padding: 40px;
+  }
+
+  .calculator input,
+  .calculator button {
+    padding: 16px;
+    font-size: 1.2rem;
+  }
+
+  #result {
+    font-size: 1.6rem;
+  }
+}   
