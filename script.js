@@ -10,8 +10,7 @@ document.getElementById('calculate').addEventListener('click', () => {
     let endTotal = endHours * 60 + endMinutes;
 
     if (endTotal < startTotal) {
-      // crosses midnight
-      endTotal += 24 * 60;
+      endTotal += 24 * 60; // handle overnight work
     }
 
     let diff = endTotal - startTotal;
@@ -21,7 +20,6 @@ document.getElementById('calculate').addEventListener('click', () => {
     document.getElementById('result').innerHTML = 
       `Total Hours: ${hours} hours and ${minutes} minutes`;
   } else {
-    document.getElementById('result').innerHTML = 
-      `Total Hours: 0`;
+    document.getElementById('result').innerHTML = `Total Hours: 0`;
   }
 });

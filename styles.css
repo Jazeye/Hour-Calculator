@@ -1,58 +1,156 @@
-body {
+/* Reset */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: Arial, sans-serif;
-  color: #fff;
   background: #222831;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 h1 {
-  text-align: center;
-  margin-bottom: 30px;
   color: #00adb5;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2rem;
 }
 
 .calculator {
-  width: 90%;
-  max-width: 300px;
-  margin: 0 auto 50px;
-  padding: 20px;
   background: #393e46;
   border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
   box-shadow: 0 4px 14px rgb(0 0 0 / 0.5);
-  text-align: center;
 }
 
 .calculator label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-size: 1rem;
 }
 
 .calculator input {
   width: 100%;
-  /* padding: 10px; */
-  height: auto;
+  padding: 12px;
   margin-bottom: 20px;
   border: none;
   border-radius: 10px;
   background: #eeeeee;
   color: #222831;
+  font-size: 1rem;
 }
 
 .calculator button {
-  padding: 10px 20px;
+  width: 100%;
+  padding: 12px;
   background: #00adb5;
   color: #fff;
   border: none;
   border-radius: 10px;
-  font-size: 16px;
-  transition: background 0.3s ease-in-out;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .calculator button:hover {
   background: #019ca5;
 }
 
-h2#result {
+#result {
+  text-align: center;
   margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+/* Small phone (up to 320px) */
+@media (max-width: 320px) {
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .calculator {
+    padding: 15px;
+  }
+
+  .calculator input,
+  .calculator button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  #result {
+    font-size: 1rem;
+  }
+}
+
+/* Large phone (up to 425px) */
+@media (max-width: 425px) {
+  h1 {
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+  }
+
+  .calculator {
+    padding: 18px;
+  }
+
+  .calculator input,
+  .calculator button {
+    padding: 11px;
+    font-size: 0.95rem;
+  }
+
+  #result {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablet (up to 768px) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .calculator {
+    padding: 20px;
+  }
+
+  .calculator input,
+  .calculator button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  #result {
+    font-size: 1.2rem;
+  }
+}
+
+/* Large desktop (above 1024px) */
+@media (min-width: 1024px) {
+  .calculator {
+    max-width: 500px;
+    padding: 30px;
+  }
+
+  .calculator input,
+  .calculator button {
+    padding: 14px;
+    font-size: 1.1rem;
+  }
+
+  #result {
+    font-size: 1.4rem;
+  }
 }
